@@ -16,7 +16,23 @@ class Dog(Animal):
         return f"{self.name} WoW WoW"
 
 
+class Walker():
+    def walk(self):
+        return f"{self.name} is walking"
+
+class FlyingAnimal(Animal,Walker):
+    def __init__(self, name,wingspan):
+        super().__init__(name)
+        self.wingspan = wingspan
+    def fly(self):
+        return f"{self.name} is flying with {self.wingspan} meters "
+
 dog = Dog("goku")
 print(dog.speak())
+eagle = FlyingAnimal("Eagle",2.5)
+print(eagle.info())
+print(eagle.fly())
+print(eagle.walk())
+
         
     
