@@ -4,14 +4,21 @@ class Animal:
 
 class Dog(Animal):
     def speak(self):
+        print("wow")
         return f"Wow wow"
 
 class Cat(Animal):
     def speak(self):
+        print("meo")
         return f"meow meow"
-dog =Dog()
+    
+def make_speak(entity):
+    entity.speak()
+    
+dog = Dog()
 cat = Cat()
 print(dog.speak())
 print(cat.speak())
-
+make_speak(dog)
+make_speak(cat)
     
